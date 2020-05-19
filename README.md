@@ -1,6 +1,5 @@
 # OpenCV Python 中文教學 
-透過範例學習使用 OpenCV 開發電腦視覺或影像處理的相關技術應用
-開發版本OpenCV4.3.0，相關的教學內容會放在 [Medium](https://medium.com/@grady1006) 與 [Youtube]() 歡迎大家線上觀看學習
+透過範例學習使用 OpenCV 開發電腦視覺或影像處理的相關技術應用，開發版本OpenCV4.3.0，相關的教學內容會放在 [Medium](https://medium.com/@grady1006) 與 [Youtube]() 歡迎大家線上觀看學習
 
 ## 目錄
 ###一、[OpenCV中的GUI功能](#)
