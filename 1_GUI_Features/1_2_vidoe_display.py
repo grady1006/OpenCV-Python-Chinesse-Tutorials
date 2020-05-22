@@ -27,7 +27,7 @@ def video_player(video_path):
 	    	print("影片讀取完畢")
 	    	break 
 	    if not ret:
-	        print("影片讀取，請確認影片格式...")
+	        print("影片讀取失敗，請確認影片格式...")
 	        break
 	    
 	    #轉灰階畫面顯示
