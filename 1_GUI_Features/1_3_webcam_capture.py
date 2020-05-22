@@ -1,10 +1,10 @@
 import cv2
 import sys
 
-def video_player(video_path):
+def webcam_capture(cam_id):
 	
 	#調用cv2.VideoCapture()讀取影片
-	cap = cv2.VideoCapture(video_path) #"xxx.aiv"
+	cap = cv2.VideoCapture(cam_id) # 0,1....
 	#影片格式支援
 
 	#cv2.namedWindow('frame',cv2.WINDOW_AUTOSIZE)
@@ -12,10 +12,7 @@ def video_player(video_path):
 	print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 	print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 	print(cap.get(cv2.CAP_PROP_FPS))
-	print(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-	frame_end=cap.get(cv2.CAP_PROP_FRAME_COUNT)
-	print("影片總偵數:",frame_end)
 
 	while cap.isOpened():
 	    
@@ -23,18 +20,15 @@ def video_player(video_path):
 	    
 	    # 正確讀取影像時 ret 回傳 True
 	    frame_count=cap.get(cv2.CAP_PROP_POS_FRAMES)
-	    if frame_count == frame_end:
-	    	print("影片讀取完畢")
-	    	break 
 	    if not ret:
-	        print("影片讀取失敗，請確認影片格式...")
+	        print("讀取失敗，請確認攝影機連接...")
 	        break
 	    
 	    #轉灰階畫面顯示
 	    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	    
-	    cv2.imshow('Video Player', gray)
-	    
+	    cv2.imshow('webcam capture', gray)
+
 	    if cv2.waitKey(1) == ord('q'):
 	        break
 	
@@ -49,7 +43,7 @@ def main(argv=None):
 	print('OpenCV 版本:',cv2.__version__)
 
 	#載入影片播放
-	video_player("data/video.mp4")
+	webcam_capture(0)
 
 if __name__ == '__main__':
     sys.exit(main())
