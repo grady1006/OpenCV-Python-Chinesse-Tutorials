@@ -23,7 +23,7 @@ def show_image(img_path):
 
 		cv2.imwrite("first_image.jpg", img)
 		print("成功轉檔與儲存!")
-		cv2.destroyAllWindows()
+		cv2.destroyAllWindows() 
 
 
 
