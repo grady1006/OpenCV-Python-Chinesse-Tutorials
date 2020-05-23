@@ -42,7 +42,7 @@ def main(argv=None):
 	print(argv)
 	print('OpenCV 版本:',cv2.__version__)
 
-	#載入影片播放
+	#選擇相機ID
 	webcam_capture(0)
 
 if __name__ == '__main__':
