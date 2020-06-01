@@ -10,7 +10,7 @@ def drawing_shapes(img_path,type):
 	if  type =='rectangle':
 		cv2.rectangle(img,(100,10),(200,200),(255,255,0),5)
 	if  type =='circle':
-		cv2.circle(img,(200,200),50,(255,0,0),-1)
+		cv2.circle(img,(180,170),45,(100,100,100),-1)
 	if  type =='ellipse':
 		cv2.ellipse(img,(256,256),(100,50),0,0,90,255,0)
 	if  type =='polylines':
@@ -24,7 +24,7 @@ def drawing_shapes(img_path,type):
 def add_text(img_path,texts):
 	img=cv2.imread(img_path)
 	font = cv2.FONT_HERSHEY_SIMPLEX
-	cv2.putText(img,texts,(100,100),font,4,(255,0,0),2,cv2.LINE_AA)
+	cv2.putText(img,texts,(350,80),font,2,(255,0,0),2,cv2.LINE_AA)
 	cv2.imshow("Text",img)
 	cv2.waitKey(0)
 
@@ -35,8 +35,8 @@ def main(argv=None):
 	print('OpenCV 版本:',cv2.__version__)
 
 	#選擇要畫的形狀
-	drawing_shapes("data/opencv.png","polylines")
-	add_text("data/opencv.png","Object")
+	drawing_shapes("data/opencv.png","circle")
+	add_text("data/opencv.png","Hello OpenCV")
 if __name__ == '__main__':
     sys.exit(main())
 
