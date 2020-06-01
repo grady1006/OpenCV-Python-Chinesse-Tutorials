@@ -36,7 +36,7 @@ def main(argv=None):
 
 	#選擇相機ID
 	drawing_shapes("data/opencv.png","polylines")
-	add_text("data/opencv.png","polylines")
+	add_text("data/opencv.png","Object")
 if __name__ == '__main__':
     sys.exit(main())
 
