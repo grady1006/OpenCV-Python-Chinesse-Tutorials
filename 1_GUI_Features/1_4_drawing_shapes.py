@@ -34,7 +34,7 @@ def main(argv=None):
 	print(argv)
 	print('OpenCV 版本:',cv2.__version__)
 
-	#選擇相機ID
+	#選擇要畫的形狀
 	drawing_shapes("data/opencv.png","polylines")
 	add_text("data/opencv.png","Object")
 if __name__ == '__main__':
