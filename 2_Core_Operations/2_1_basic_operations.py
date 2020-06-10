@@ -1,5 +1,6 @@
 import cv2
 import sys
+import PySide2
 
 def show_image(img_path):
 	
@@ -59,7 +60,7 @@ def show_image(img_path):
 	print(b.shape)
 
 	#指定通道顏色 
-	img[:,:,2] = 255
+	img[:,:,2] = 255 #R全部變成255
 
 	#合併通道
 	img_2 = cv2.merge((b,g,r))
