@@ -1,6 +1,5 @@
 import cv2
 import sys
-import PySide2
 
 def show_image(img_path):
 	
