@@ -12,7 +12,7 @@
 
 ### 二、[學習OpenCV中圖像基本操作](https://github.com/grady1006/OpenCV-Python-Chinesse-Tutorials/tree/master/2_Core_Operations)
 #### 2-1 基礎影像操作 (像素、通道、區域選取、分割、合併)
-#### 2-2 基礎影像處理 (相加、融合、位移計算)
+#### 2-2 基礎影像處理 (相加、融合、位元計算)
 #### 2-3 算法衡量評估指標 (算法性能、優化評估)
 
 
