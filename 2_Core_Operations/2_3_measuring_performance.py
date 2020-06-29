@@ -14,12 +14,12 @@ def measuring_performance(img1,img2):
 
 	#計算讀取兩張圖片所需時間
 	#cv2.getTickFrequency() 回傳number of clock-cycles per second 每秒時脈頻率
-	print((e2-e1)/cv2.getTickFrequency())
+	print("讀取兩張影像時間:",(e2-e1)/cv2.getTickFrequency(),"s")
 
 	#開啟基本優化模式，優化使用不同指令集 SSE2,AVX
 	#cv2.useOptimized()開啟加速運算
 
-	print(cv2.useOptimized())
+	print("開啟OpenCV運算優化:",cv2.useOptimized())
 	cv2.setUseOptimized(False)
 
 	e1 = cv2.getTickCount() #起始時間戳
@@ -27,7 +27,7 @@ def measuring_performance(img1,img2):
 
 	e2 = cv2.getTickCount() #終止時間戳
 
-	print((e2-e1)/cv2.getTickFrequency())
+	print("影像Blur計算時間:",(e2-e1)/cv2.getTickFrequency(),"s")
 	cv2.imshow("res",res)
 
 	#計算統計圖片非零值數速度比較
@@ -37,13 +37,13 @@ def measuring_performance(img1,img2):
 	e1 = cv2.getTickCount() #起始時間戳
 	z = cv2.countNonZero(robot2gray)
 	e2 = cv2.getTickCount() #終止時間戳
-	print("OpenCV 版本時間:",(e2-e1)/cv2.getTickFrequency())
+	print("OpenCV 版本時間:",(e2-e1)/cv2.getTickFrequency(),"s")
 
 	#使用Numpy 計算所需時間
 	e1 = cv2.getTickCount() #起始時間戳
 	z = np.count_nonzero(robot2gray)
 	e2 = cv2.getTickCount() #終止時間戳
-	print("Numpy 版本時間:",(e2-e1)/cv2.getTickFrequency())
+	print("Numpy 版本時間:",(e2-e1)/cv2.getTickFrequency(),"s")
 
 
 	cv2.waitKey(0)
