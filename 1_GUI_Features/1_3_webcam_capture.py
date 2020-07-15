@@ -43,7 +43,7 @@ def main(argv=None):
 	print('OpenCV 版本:',cv2.__version__)
 
 	#選擇相機ID
-	webcam_capture(0)
+	webcam_capture(1)
 
 if __name__ == '__main__':
     sys.exit(main())
