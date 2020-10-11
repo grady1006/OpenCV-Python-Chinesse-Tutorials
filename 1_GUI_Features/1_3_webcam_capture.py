@@ -26,7 +26,8 @@ def webcam_capture(cam_id):
 	    
 	    #轉灰階畫面顯示
 	    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-	    
+	    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2BGR565)
+
 	    cv2.imshow('webcam capture', gray)
 
 	    if cv2.waitKey(1) == ord('q'):
